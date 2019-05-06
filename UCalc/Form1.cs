@@ -87,12 +87,14 @@ namespace UCalc
             string input = cmd9.Text;
             AppendInput(input);
         }
-        #endregion
 
         private void cmdDot_Click(object sender, EventArgs e)
         {
             AppendInput(".");
         }
+        #endregion
+
+
 
 
         #region KEYPRESS
@@ -159,6 +161,12 @@ namespace UCalc
 
         }
 
+        /// <summary>
+        /// If there is an text in the txtInput area, check to see
+        /// if it is a valid float (_rpn.Add(string)) return true if
+        /// the string was converted to a float.--and if it is, then
+        /// it adds it to the operands list in _rpn.
+        /// </summary>
         private void HandleInput()
         {
             if (txtInput.Text.Length > 0)
