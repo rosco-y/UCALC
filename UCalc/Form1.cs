@@ -100,7 +100,7 @@ namespace UCalc
         {
             switch (e.KeyCode)
             {
-                
+
                 case Keys.NumPad1:
                     cmd1_Click(sender, new EventArgs());
                     break;
@@ -189,10 +189,24 @@ namespace UCalc
             }
         }
 
+
+
+
         #endregion
 
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.WindowState = this.WindowState;
+            Properties.Settings.Default.WindowLocation = this.Location;
+            Properties.Settings.Default.WindowSize = this.Size;
+            Properties.Settings.Default.Save();
+        }
 
-
-
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            this.WindowState = Properties.Settings.Default.WindowState;
+            this.Location = Properties.Settings.Default.WindowLocation;
+            this.Size = Properties.Settings.Default.WindowSize;
+        }
     }
 }

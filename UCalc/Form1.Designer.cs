@@ -309,8 +309,10 @@
             this.ClientSize = new System.Drawing.Size(1522, 838);
             this.Controls.Add(this.grpInput);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "UCALC";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.grpInput.ResumeLayout(false);
             this.grpInput.PerformLayout();
