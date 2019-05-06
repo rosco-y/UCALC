@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             this.grpInput = new System.Windows.Forms.GroupBox();
+            this.txtHistory = new System.Windows.Forms.TextBox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.cmdEquals = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.cmdDot = new System.Windows.Forms.Button();
             this.cmd0 = new System.Windows.Forms.Button();
             this.cmd3 = new System.Windows.Forms.Button();
@@ -42,11 +47,6 @@
             this.cmd8 = new System.Windows.Forms.Button();
             this.cmd7 = new System.Windows.Forms.Button();
             this.txtInput = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.txtHistory = new System.Windows.Forms.TextBox();
             this.grpInput.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,53 @@
             this.grpInput.TabStop = false;
             this.grpInput.Text = "Input";
             // 
+            // txtHistory
+            // 
+            this.txtHistory.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHistory.Location = new System.Drawing.Point(26, 19);
+            this.txtHistory.Multiline = true;
+            this.txtHistory.Name = "txtHistory";
+            this.txtHistory.Size = new System.Drawing.Size(305, 356);
+            this.txtHistory.TabIndex = 33;
+            this.txtHistory.TabStop = false;
+            this.txtHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // button18
+            // 
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button18.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button18.Location = new System.Drawing.Point(329, 668);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 60);
+            this.button18.TabIndex = 32;
+            this.button18.TabStop = false;
+            this.button18.Text = "/";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button17.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button17.Location = new System.Drawing.Point(329, 588);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 60);
+            this.button17.TabIndex = 31;
+            this.button17.TabStop = false;
+            this.button17.Text = "*";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button16.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button16.Location = new System.Drawing.Point(329, 426);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 60);
+            this.button16.TabIndex = 30;
+            this.button16.TabStop = false;
+            this.button16.Text = "-";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // cmdEquals
             // 
             this.cmdEquals.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -88,6 +135,18 @@
             this.cmdEquals.TabStop = false;
             this.cmdEquals.Text = "=";
             this.cmdEquals.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button14.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.button14.Location = new System.Drawing.Point(329, 506);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 60);
+            this.button14.TabIndex = 27;
+            this.button14.TabStop = false;
+            this.button14.Text = "+";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // cmdDot
             // 
@@ -242,65 +301,6 @@
             this.txtInput.TabStop = false;
             this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // button14
-            // 
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button14.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button14.Location = new System.Drawing.Point(329, 506);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 60);
-            this.button14.TabIndex = 27;
-            this.button14.TabStop = false;
-            this.button14.Text = "+";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button16.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button16.Location = new System.Drawing.Point(329, 426);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 60);
-            this.button16.TabIndex = 30;
-            this.button16.TabStop = false;
-            this.button16.Text = "-";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button17.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button17.Location = new System.Drawing.Point(329, 588);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 60);
-            this.button17.TabIndex = 31;
-            this.button17.TabStop = false;
-            this.button17.Text = "*";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button18.Font = new System.Drawing.Font("Symbol", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.button18.Location = new System.Drawing.Point(329, 668);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 60);
-            this.button18.TabIndex = 32;
-            this.button18.TabStop = false;
-            this.button18.Text = "/";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // txtHistory
-            // 
-            this.txtHistory.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHistory.Location = new System.Drawing.Point(26, 19);
-            this.txtHistory.Multiline = true;
-            this.txtHistory.Name = "txtHistory";
-            this.txtHistory.Size = new System.Drawing.Size(305, 356);
-            this.txtHistory.TabIndex = 33;
-            this.txtHistory.TabStop = false;
-            this.txtHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +309,7 @@
             this.Controls.Add(this.grpInput);
             this.Name = "frmMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.grpInput.ResumeLayout(false);
             this.grpInput.PerformLayout();

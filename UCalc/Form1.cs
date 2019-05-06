@@ -137,11 +137,9 @@ namespace UCalc
                         txtInput.Clear();
                     }
                     break;
-
-
-
-
             }
         }
+
+      
     }
 }
