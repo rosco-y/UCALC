@@ -12,8 +12,11 @@ namespace UCalc
 {
     public partial class frmMain : Form
     {
+
+        RPN _rpn;
         public frmMain()
         {
+            _rpn = new RPN();
             InitializeComponent();
             this.Focus();
         }
@@ -92,6 +95,7 @@ namespace UCalc
         }
 
 
+        #region KEYPRESS
         private void frmMain_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -131,15 +135,60 @@ namespace UCalc
                     cmdDot_Click(sender, new EventArgs());
                     break;
                 case Keys.Enter:
-                    if (txtInput.Text.Length > 0)
-                    {
-                        txtHistory.Text += txtInput.Text + Environment.NewLine;
-                        txtInput.Clear();
-                    }
+                    HandleInput();
                     break;
+                case Keys.Add:
+                    TryOperate('+');
+                    break;
+                case Keys.Subtract:
+                    TryOperate('-');
+                    break;
+                case Keys.Multiply:
+                    TryOperate('*');
+                    break;
+                case Keys.Divide:
+                    TryOperate('/');
+                    break;
+
+            }
+
+
+        }
+
+        private void HandleInput()
+        {
+            if (txtInput.Text.Length > 0)
+            {
+                if (_rpn.Add(txtInput.Text))
+                {
+                    txtHistory.Text += txtInput.Text + Environment.NewLine;
+                    txtInput.Clear();
+                }
             }
         }
 
-      
+        #endregion
+
+        #region METHODS
+
+
+        void TryOperate(char operation)
+        {
+            HandleInput();
+            if (_rpn.Operands.Count == 2)
+            {
+                float answer = _rpn.Operate(operation);
+                string problem = $"{_rpn.Operands[0]} {operation} {_rpn.Operands[1]} = {answer}";
+                txtHistory.AppendText(problem + Environment.NewLine);
+                _rpn.Operands.Clear();
+                _rpn.Operands.Add(answer);
+            }
+        }
+
+        #endregion
+
+
+
+
     }
 }
