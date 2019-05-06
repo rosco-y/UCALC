@@ -149,6 +149,10 @@ namespace UCalc
                 case Keys.Divide:
                     TryOperate('/');
                     break;
+                case Keys.Delete:
+                    if (txtInput.Text.Length > 0)
+                        txtInput.Text = txtInput.Text.Substring(0, txtInput.Text.Length - 1);
+                    break;
 
             }
 
