@@ -83,6 +83,7 @@
             this.txtHistory.Location = new System.Drawing.Point(26, 19);
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
+            this.txtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtHistory.Size = new System.Drawing.Size(305, 356);
             this.txtHistory.TabIndex = 33;
             this.txtHistory.TabStop = false;
@@ -308,8 +309,8 @@
             this.ClientSize = new System.Drawing.Size(1522, 838);
             this.Controls.Add(this.grpInput);
             this.Name = "frmMain";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Text = "UCALC";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             this.grpInput.ResumeLayout(false);
             this.grpInput.PerformLayout();
